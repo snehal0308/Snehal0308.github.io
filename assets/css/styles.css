@@ -112,6 +112,8 @@ img {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
+
+
 /* Navbar */
 .nav {
   height: var(--header-height);
@@ -189,6 +191,15 @@ img {
 
 .home_data {
   align-self: center;
+}
+
+.blog_text {
+    position: absolute;
+    left: calc(50% - 50px/2 - 93.5px);
+    top:13.64%;
+    bottom: 52.25%;
+     margin-bottom: 100px;
+
 }
 
 .home_title {
@@ -473,6 +484,10 @@ img {
     height: 100vh;
   }
 
+    .blog{
+    height: 29vh;
+  }
+
   .home_data {
     align-self: flex-end;
   }
@@ -531,5 +546,117 @@ img {
 
   .home_img {
     right: 10%;
+  }
+}
+
+/* Blog part css */
+
+
+.main-container {
+  padding: 30px;
+}
+
+/* HEADING */
+
+.heading {
+  text-align: center;
+}
+
+.heading__title {
+  font-weight: 600;
+}
+
+.heading__credits {
+  margin: 10px 0px;
+  color: #888888;
+  font-size: 25px;
+  transition: all 0.5s;
+}
+
+.heading__link {
+  text-decoration: none;
+}
+
+.heading__credits .heading__link {
+  color: inherit;
+}
+
+/* CARDS */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.card__link,
+.card__exit,
+.card__icon {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+
+.card__title {
+  grid-row: 3/4;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+
+/* CARD BACKGROUNDS */
+
+.card-1 {
+  background: linear-gradient(#8e0af3,#5001fb);
+}
+
+.card-2 {
+  background: linear-gradient(#5001fb, #8e0af3);
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1600px) {
+  .cards {
+    justify-content: center;
   }
 }
